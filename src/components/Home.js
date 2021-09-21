@@ -26,7 +26,7 @@ const Home = () => {
                 M.toast({html:'passwords do not match',classes:"red"})
                 return 
             }
-            fetch("https://chat-app-nfra.herokuapp.com//signup",{
+            fetch("https://chat-app-nfra.herokuapp.com/signup",{
                 method:"post",
                 headers:{
                     "Content-Type":"application/json"
@@ -99,7 +99,7 @@ const Home = () => {
                 M.toast({html:'invalid email',classes:"red"})
                 return
             }
-            fetch("https://chat-app-nfra.herokuapp.com//signin",{
+            fetch("https://chat-app-nfra.herokuapp.com/signin",{
                 method:"post",
                 headers:{
                     "Content-Type":"application/json"

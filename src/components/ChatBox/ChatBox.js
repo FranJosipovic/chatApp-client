@@ -26,7 +26,7 @@ const ChatBox = () => {
       }, [messages]);
 
     const createMessage = () => {
-        fetch("https://chat-app-nfra.herokuapp.com//createMessage",{
+        fetch("https://chat-app-nfra.herokuapp.com/createMessage",{
             method:"post",
             headers:{
                 "Content-Type":"application/json",
@@ -49,7 +49,7 @@ const ChatBox = () => {
 
     useEffect(() => {
         {convId && 
-            fetch(`https://chat-app-nfra.herokuapp.com//message/${convId._id}`,{
+            fetch(`https://chat-app-nfra.herokuapp.com/message/${convId._id}`,{
                 headers:{
                     "authorization":"Bearer "+localStorage.getItem("jwt")
                 }
