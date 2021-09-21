@@ -41,7 +41,7 @@ const Conversation = ({}) => {
     useEffect(() => {
         M.Modal.init(searchModal.current)
         M.Modal.init(searchModal2.current)
-        fetch("/myconversations",{
+        fetch("https://chat-app-nfra.herokuapp.com//myconversations",{
           headers:{
             "authorization":"Bearer "+localStorage.getItem("jwt")
           }
@@ -57,7 +57,7 @@ const Conversation = ({}) => {
 
     useEffect(() => {
       if(url){
-          fetch("/updateprofilepic",{
+          fetch("https://chat-app-nfra.herokuapp.com//updateprofilepic",{
               method:"put",
               headers:{
                   "Content-type":"application/json",
@@ -96,7 +96,7 @@ const Conversation = ({}) => {
 
     const fetchUser = (query) => {
         setSearch(query)
-        fetch("/search-user",{
+        fetch("https://chat-app-nfra.herokuapp.com//search-user",{
           method:"post",
           headers:{
             "Content-Type":"application/json",
@@ -113,7 +113,7 @@ const Conversation = ({}) => {
       }
 
     const createConversation = (id) => {
-        fetch("/create-conv",{
+        fetch("https://chat-app-nfra.herokuapp.com//create-conv",{
             method:"post",
             headers:{
                 "Content-Type":"application/json",
